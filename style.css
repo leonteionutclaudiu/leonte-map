@@ -50,7 +50,7 @@ a:visited {
 }
 
 .logo {
-  height: 20rem;
+  max-height: 20rem;
   align-self: center;
   margin-bottom: 1rem;
 }
@@ -229,11 +229,11 @@ a:visited {
 .reset-all {
   background-color: var(--color-brand--2);
   color: var(--color-dark--1);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   max-width: 20rem;
   padding: 1rem 2rem;
   border-radius: 5rem;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   cursor: pointer;
   transition: all 0.5s;
 }
@@ -256,7 +256,7 @@ a:visited {
   }
 
   .logo {
-    height: 18rem;
+    max-height: 14rem;
   }
 }
 
@@ -267,7 +267,7 @@ a:visited {
   }
 
   .logo {
-    height: 15rem;
+    max-height: 12rem;
   }
 
   .form {
