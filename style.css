@@ -130,7 +130,6 @@ a:visited {
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem 2.5rem;
 
-  /* Match height and activity boxes */
   height: 9.25rem;
   transition: all 0.5s, transform 1ms;
 }
@@ -175,7 +174,14 @@ a:visited {
 }
 
 .form__btn {
-  display: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  background-color: var(--color-brand--2);
+  transition: all 0.5s;
+}
+
+.form__btn:hover {
+  background-color: var(--color-brand--1);
 }
 
 .copyright {
@@ -240,6 +246,17 @@ a:visited {
 
 .reset-all:hover {
   background-color: var(--color-brand--1);
+}
+
+.error {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(221, 107, 107);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
 
 /* MEDIA QUERIES */

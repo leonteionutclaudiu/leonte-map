@@ -65,6 +65,7 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 const resetAll = document.querySelector(`.reset-all`);
+const errorEl = document.querySelector(`.error`);
 
 class App {
   #map;
@@ -81,6 +82,7 @@ class App {
 
     // Attach event handlers
     form.addEventListener(`submit`, this._newWorkout.bind(this));
+
     inputType.addEventListener(`change`, this._toggleElevationField);
     containerWorkouts.addEventListener(`click`, this._moveToPopup.bind(this));
   }
@@ -165,10 +167,12 @@ class App {
       if (
         !validInputs(distance, duration, cadence) ||
         !allPositive(distance, duration, cadence)
-      )
-        return alert(`Inputs have to be positive numbers!`);
+      ) {
+        return errorEl.classList.remove(`hidden`);
+      }
 
       workout = new Running([lat, lng], distance, duration, cadence);
+      errorEl.classList.add(`hidden`);
     }
 
     // If workout cycling, create cycling object
@@ -178,10 +182,12 @@ class App {
       if (
         !validInputs(distance, duration, elevation) ||
         !allPositive(distance, duration)
-      )
-        return alert(`Inputs have to be positive numbers!`);
+      ) {
+        return errorEl.classList.remove(`hidden`);
+      }
 
       workout = new Cycling([lat, lng], distance, duration, elevation);
+      errorEl.classList.add(`hidden`);
     }
 
     // Add new object to workout array
