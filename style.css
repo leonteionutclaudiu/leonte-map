@@ -50,7 +50,7 @@ a:visited {
 }
 
 .logo {
-  max-height: 20rem;
+  max-height: 16rem;
   align-self: center;
   margin-bottom: 1rem;
 }
@@ -256,7 +256,7 @@ a:visited {
   }
 
   .logo {
-    max-height: 14rem;
+    max-height: 12rem;
   }
 }
 
@@ -267,7 +267,7 @@ a:visited {
   }
 
   .logo {
-    max-height: 12rem;
+    max-height: 10rem;
   }
 
   .form {
