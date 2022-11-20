@@ -248,11 +248,16 @@ a:visited {
   background-color: var(--color-brand--1);
 }
 
-.error {
+.error,
+.success {
   font-size: 1.3rem;
   font-weight: bold;
   color: rgb(221, 107, 107);
   text-align: center;
+}
+
+.success {
+  color: var(--color-brand--2);
 }
 
 .hidden {

@@ -66,6 +66,7 @@ const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 const resetAll = document.querySelector(`.reset-all`);
 const errorEl = document.querySelector(`.error`);
+const successEl = document.querySelector(`.success`);
 
 class App {
   #map;
@@ -173,6 +174,10 @@ class App {
 
       workout = new Running([lat, lng], distance, duration, cadence);
       errorEl.classList.add(`hidden`);
+      successEl.classList.remove(`hidden`);
+      setTimeout(() => {
+        successEl.classList.add(`hidden`);
+      }, 5000);
     }
 
     // If workout cycling, create cycling object
@@ -188,6 +193,10 @@ class App {
 
       workout = new Cycling([lat, lng], distance, duration, elevation);
       errorEl.classList.add(`hidden`);
+      successEl.classList.remove(`hidden`);
+      setTimeout(() => {
+        successEl.classList.add(`hidden`);
+      }, 5000);
     }
 
     // Add new object to workout array
