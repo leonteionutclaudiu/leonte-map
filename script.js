@@ -107,7 +107,6 @@ class App {
 
     console.log(this);
     this.#map = L.map('map').setView(coords, this.#mapZoomLevel);
-    // console.log(map);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution:
@@ -201,7 +200,6 @@ class App {
 
     // Add new object to workout array
     this.#workouts.push(workout);
-    console.log(workout);
 
     // Render workout on map as marker
     this._renderWorkoutMarker(workout);
